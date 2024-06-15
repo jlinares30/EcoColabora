@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoColabora - Create Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <img src="./imagenes/logo.jpg" alt="EcoColabora Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="perfil.html">Profile</a></li>
+                    <li><a href="proyectos.html">Projects</a></li>
+                    <li><a href="share-ideas.html">Shared Ideas</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="create-project-section">
+        <h2>Create Project</h2>
+        <form>
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title">
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" name="description"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="image">Upload Image</label>
+                <input type="file" id="image" name="image">
+            </div>
+            <div class="form-group">
+                <label for="payment">Add Payment Method</label>
+                <div class="payment-methods">
+                    <img src="visa.png" alt="Visa">
+                    <img src="paypal.png" alt="Paypal">
+                    <img src="applepay.png" alt="Apple Pay">
+                    <img src="amazonpay.png" alt="Amazon Pay">
+                </div>
+            </div>
+            <button type="submit">Create Project</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>EcoColabora © 2023</p>
+    </footer>
+</body>
+</html>
