@@ -69,11 +69,15 @@ body {
 
 .item {
     background-color: #e0e0e0;
+    height: 250px;
     border-radius: 10px;
     margin: 0 0.5rem;
     padding: 1rem;
     min-width: 200px;
     flex: none;
+}
+.item img{
+    width: 200px;
 }
 
 .carousel-button {
