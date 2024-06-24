@@ -9,7 +9,8 @@
 <body>
     <header>
         <div class="navbar">
-            <img src="./imagenes/logo.jpg" alt="EcoColabora Logo" class="logo">
+            <a href="index.html"><img src="./imagenes/logo.jpg" alt="EcoColabora Logo" class="logo"></a>
+            
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -26,16 +27,27 @@
         <div class="carousel">
             <button class="carousel-button left">&lt;</button>
             <div class="carousel-items">
-                <div class="item">
+                <a href="./crear-proyecto.html" class="create-new-project"><div class="item">
+                    <img src="./imagenes/plus.png" alt="Create Project">
                     <h4>Create new project</h4>
+                </div></a>
+                <div class="item">
+                    <img src="./imagenes/reduccion-residuos-plasticos.jpg" alt="Reducción de Residuos Plásticos">
+                    <h4>Reducción de Residuos Plásticos</h4>
+                    <p>Iniciativa para reducir el uso de plásticos de un solo uso mediante campañas de concienciación y alternativas ecológicas.</p>
+                    <a href="./detalle-proyecto.html"><button class="btn-details" >Ver Detalles</button></a>
                 </div>
                 <div class="item">
-                    <h4>Title</h4>
-                    <p>Description</p>
+                    <img src="./imagenes/energia-eolica.jpg" alt="Energía Eólica Comunitaria">
+                    <h4>Energía Eólica Comunitaria</h4>
+                    <p>Proyecto para instalar turbinas eólicas en comunidades rurales, proporcionando energía limpia y reduciendo costos energéticos.</p>
+                    <a href="./detalle-proyecto.html"><button class="btn-details" >Ver Detalles</button></a>
                 </div>
                 <div class="item">
-                    <h4>Title</h4>
-                    <p>Description</p>
+                    <img src="./imagenes/huertos-urbanos.jpg" alt="Huertos Urbanos">
+                    <h4>Huertos Urbanos</h4>
+                    <p>Fomento de la agricultura urbana para promover la autosuficiencia alimentaria y mejorar la calidad del aire en ciudades.</p>
+                    <a href="./detalle-proyecto.html"><button class="btn-details" >Ver Detalles</button></a>
                 </div>
             </div>
             <button class="carousel-button right">&gt;</button>
@@ -46,16 +58,34 @@
             <button class="carousel-button left">&lt;</button>
             <div class="carousel-items">
                 <div class="item">
-                    <h4>Title</h4>
-                    <p>Description</p>
+                    <img src="./imagenes/ecosistemas-marinos.jpg" alt="Conservación de Ecosistemas Marinos">
+                    <h4>Conservación de Ecosistemas Marinos</h4>
+                    <p>Proyectos de protección y restauración de arrecifes de coral y hábitats marinos, promoviendo la biodiversidad.</p>
+                    <button class="btn-details">Ver Detalles</button>
                 </div>
                 <div class="item">
-                    <h4>Title</h4>
-                    <p>Description</p>
+                    <img src="./imagenes/reciclaje-electronico.jpg" alt="Reciclaje Electrónico">
+                    <h4>Reciclaje Electrónico</h4>
+                    <p>Establecimiento de puntos de recogida y reciclaje de dispositivos electrónicos para reducir la contaminación por e-waste.</p>
+                    <button class="btn-details">Ver Detalles</button>
                 </div>
                 <div class="item">
-                    <h4>Title</h4>
-                    <p>Description</p>
+                    <img src="./imagenes/plantacion-arboles.jpg" alt="Plantación de Árboles">
+                    <h4>Plantación de Árboles</h4>
+                    <p>Campañas de reforestación en zonas urbanas y rurales para combatir el cambio climático y mejorar la calidad del aire.</p>
+                    <button class="btn-details">Ver Detalles</button>
+                </div>
+                <div class="item">
+                    <img src="./imagenes/educacion-ambiental.jpg" alt="Educación Ambiental en Escuelas">
+                    <h4>Educación Ambiental en Escuelas</h4>
+                    <p>Programas educativos en colegios para enseñar a los niños la importancia de la sostenibilidad y el cuidado del medio ambiente.</p>
+                    <button class="btn-details">Ver Detalles</button>
+                </div>
+                <div class="item">
+                    <img src="./imagenes/movilidad-sostenible.jpg" alt="Movilidad Sostenible">
+                    <h4>Movilidad Sostenible</h4>
+                    <p>Promoción del uso de bicicletas y transporte público ecológico para reducir las emisiones de carbono en las ciudades.</p>
+                    <button class="btn-details">Ver Detalles</button>
                 </div>
             </div>
             <button class="carousel-button right">&gt;</button>
@@ -63,7 +93,8 @@
     </section>
 
     <footer>
-        <p>EcoColabora 2023</p>
+        <p>EcoColabora 2024</p>
     </footer>
+    <script src="./main.js"></script>
 </body>
 </html>

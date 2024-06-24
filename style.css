@@ -2,6 +2,8 @@
     --dark-green: rgb(4, 24, 35);
     --green-medio: rgb(31, 133, 5);
     --gree-light: rgb(121, 182, 105);
+    --orange: rgb(228, 139, 9);
+    --dark-white: rgb(225, 222, 222);
 }
 
 * {
@@ -26,7 +28,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 2rem auto;
+    margin: 80px auto 2rem;
     max-width: 1200px;
 }
 
@@ -36,6 +38,7 @@ body {
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
 }
 
 .profile-card img {
@@ -60,20 +63,34 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .carousel-items {
     display: flex;
-    overflow-x: auto;
+    overflow-x: scroll;
+    max-width: 800px;
+    scrollbar-width: none;
+}
+.carousel-items::-webkit-scrollbar {
+    display: none; 
+}
+.carousel-items h4{
+    margin-top: 10px;
+}
+.carousel-items p{
+    margin-top: 10px;
+    font-size: .8rem;
 }
 
 .item {
     background-color: #e0e0e0;
-    height: 250px;
+    height: 290px;
     border-radius: 10px;
     margin: 0 0.5rem;
     padding: 1rem;
     min-width: 200px;
+    max-width: 300px;
     flex: none;
 }
 .item img{
@@ -107,21 +124,29 @@ footer {
 }
 /* ------------------INDEX----------------------- */
 .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./imagenes/inventario-fondo.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./imagenes/Construcción-sostenible.jpg);
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
     text-align: center;
     margin: auto 0;
-    padding: 20%;
-    height: 920px;
+    padding: 15%;
+    height: 100vh;
     color: #f4f4f4;
 }
 
 .hero h1 {
     font-size: 48px;
     margin-bottom: 20px;
-    
+    opacity: 0;
+    color: var(--orange);
+    animation: aparicion 1.5s forwards;
+}
+
+@keyframes aparicion {
+    to {
+        opacity: 1;
+    }
 }
 
 .hero p {
@@ -140,41 +165,38 @@ footer {
 }
 
 .hero .btn-primary {
-    background-color: #547ea0;
+    background-color: var(--dark-green);
     color: white;
 }
-
-.hero .btn-secondary {
-    background-color: #e5a65f;
-    color: white;
+.hero .btn-primary:hover {
+    background-color: var(--green-medio);
 }
-
 /* descripcion */
 
 .container {
-    max-width: 1200px;
+    max-width: 800px;
     margin: 0 auto;
-    padding: 9% 0;
-    height: 920px;
+    /* padding: 9% 0; */
+    height: 85vh;
     z-index: 1;
 }
 
 .product-overview h2 {
     text-align: center;
-    margin-bottom: 60px;
+    margin: 20px 0 30px;
     color: #333;
     font-weight: 900;
-    font-size: 50px ;
+    font-size: 30px ;
 }
 
 .product-overview p {
     margin: 30px 10px;
-    color: #555;
+    color: #333;
     font-weight: 500;
 }
 
 .product-overview {
-    background-image: linear-gradient(to bottom, #e5a65f , #885b27);
+    background-image: linear-gradient(to bottom, var(--gree-light) , var(--dark-green));
     /* height: 850px; */
 }
 
@@ -183,19 +205,18 @@ footer {
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 20px;
-    border-color: red;
     border-width: 5px;
 }
 
 .feature {
-    background-color: #fff;
+    background-color: var(--dark-white);
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     flex: 1 1 calc(25% - 40px);
-    max-width: calc(25% - 40px);
+    /* max-width: calc(25% - 40px); */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -210,13 +231,14 @@ footer {
 }
 
 .feature h3 {
-    font-size: 30px;
+    font-size: 1em;
     font-weight: 900;
     margin-bottom: 10px;
-    color: #004aad;
+    color: var(--orange);
 }
 
 .feature p {
+    font-size: .9em;
     color: #777;
 }
 
@@ -235,22 +257,17 @@ footer {
 /* cómo funciona */
 .how-it-works h2 {
     text-align: center;
-    margin-bottom: 60px;
-    color: #fff;
+    margin-bottom: 40px;
+    color: var(--dark-white);
     font-weight: 900;
-    font-size: 50px ;
-}
-
-.how-it-works p {
-    margin-bottom: 20px;
-    color: #555;
+    font-size: 30px ;
 }
 
 .how-it-works {
-    background-image: linear-gradient(to bottom, #3b1b2a , rgb(10, 10, 10));
-    padding: 40px 0;
+    background-image: linear-gradient(to bottom, var(--dark-green) , var(--green-medio));
+    padding: 30px 0;
     position: relative;
-
+    height: 100vh;
 }
 .steps-img{
     display: flex;
@@ -264,14 +281,12 @@ footer {
 }
 
 .step {
-    background-color: #fff;
+    background-color: rgb(225, 222, 222);
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 13px;
     margin-bottom: 20px;
-    width: 100%;
-    max-width: 300px;
     margin-right: 20px;
     z-index: 1;
 }
@@ -281,18 +296,20 @@ footer {
 } */
 
 .step h3 {
-    font-size: 20px;
-    color: #547ea0;
-    margin-bottom: 10px;
+    font-size: .8em;
+    color: var(--orange);
+    margin-bottom: 7px;
 }
 
 .step p {
-    font-size: 16px;
+    font-size: .7em;
     color: #333;
+    margin-bottom: 5px;
+    color: #555;
 }
 
 .how-it-works img {
-    width: 800px;
+    width: 600px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1;
@@ -322,7 +339,7 @@ footer {
     margin-bottom: 20px;
     color: #333;
     font-weight: 900;
-    font-size: 50px ;
+    font-size: 30px ;
 }
 
 .testimonial p {
@@ -331,19 +348,19 @@ footer {
 }
 
 .testimonials {
-    background-image: linear-gradient(to bottom, #e5a65f , #885b27);
+    background-image: linear-gradient(to bottom, var(--gree-light) , var(--dark-green));
     padding: 40px 0;
 }
 
 .testimonial {
-    background-color: #fff;
+    background-color: var(--dark-white);
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     padding: 20px;
-    margin: 80px auto;
-    max-width: 800px;
+    margin: 20px auto;
+    max-width: 600px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -353,15 +370,15 @@ footer {
 }
 
 .testimonial p {
-    font-size: 18px;
+    font-size: 16px;
     font-style: italic;
     color: #333;
     margin-bottom: 10px;
 }
 
 .testimonial h4 {
-    font-size: 16px;
-    color: #004aad;
+    font-size: 12px;
+    color: var(--orange);
 }
 
 .logos {
@@ -402,44 +419,44 @@ footer {
 .circle{
     position: absolute;
     border-radius: 50%;
-    background: #a88561;
+    background: var(--dark-green);
     animation: ripple 15s infinite;
     box-shadow: 0px 0px 1px 0px #3b1b2a;
   }
   
   .small{
+    width: 100px;
+    height: 100px;
+    left: -50px;
+    bottom: -50px;
+  }
+  
+  .medium{
     width: 200px;
     height: 200px;
     left: -100px;
     bottom: -100px;
   }
   
-  .medium{
+  .large{
+    width: 300px;
+    height: 300px;
+    left: -150px;
+    bottom: -150px;
+  }
+  
+  .xlarge{
     width: 400px;
     height: 400px;
     left: -200px;
     bottom: -200px;
   }
   
-  .large{
-    width: 600px;
-    height: 600px;
-    left: -300px;
-    bottom: -300px;
-  }
-  
-  .xlarge{
-    width: 800px;
-    height: 800px;
-    left: -400px;
-    bottom: -400px;
-  }
-  
   .xxlarge{
-    width: 1000px;
-    height: 1000px;
-    left: -500px;
-    bottom: -500px;
+    width: 500px;
+    height: 500px;
+    left: -250px;
+    bottom: -250px;
   }
   
   .shade1{
@@ -477,10 +494,10 @@ footer {
 /* planes y precios */
 .pricing h2 {
     text-align: center;
-    margin-bottom: 90px;
+    margin: 50px 0 60px;
     font-weight: 900;
-    font-size: 50px ;
-    color: #fff;
+    font-size: 30px ;
+    color: var(--dark-white);
 }
 .pricing p {
     margin-bottom: 20px;
@@ -488,8 +505,8 @@ footer {
 }
 .pricing{
     position: relative;
-    background-image: linear-gradient(to bottom, #3b1b2a , rgb(10, 10, 10));
-
+    background-image: linear-gradient(to bottom, var(--dark-green) , var(--green-medio));
+    height: 100vh;
 }
 .pricing .plans {
     display: flex;
@@ -499,13 +516,13 @@ footer {
 }
 
 .plan {
-    background-color: #fff;
+    background-color: var(--dark-white);
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 30px 20px;
-    width: 300px;
-    height: 500px;
+    padding: 20px;
+    width: 200px;
+    height: 300px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     z-index: 1;
@@ -518,16 +535,16 @@ footer {
 }
 
 .plan h3 {
-    font-size: 1.5em;
-    margin-bottom: 40px;
-    color: #547ea0;
+    font-size: 1em;
+    margin-bottom: 20px;
+    color: var(--orange);
     font-weight: 800;
 }
 
 .plan p {
-    font-size: 2em;
+    font-size: 1em;
     color: #000;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     font-weight: 300;
 }
 
@@ -541,7 +558,7 @@ footer {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    font-size: 1.1em;
+    font-size: .7em;
     color: #555;
 }
 
@@ -554,21 +571,21 @@ footer {
 .buy-button {
     display: block;
     position: absolute;
-    width: 85%;
+    width: 80%;
     padding: 10px 0;
-    background-color: #547ea0;
+    background-color: var(--dark-green);
     color: white;
     border: none;
     border-radius: 5px;
-    font-size: 1.2em;
+    font-size: .9em;
     cursor: pointer;
     text-align: center;
     transition: background-color 0.3s ease;
-    bottom: 30px;
+    bottom: 20px;
 }
 
 .buy-button:hover {
-    background-color: #97b3d0;
+    background-color: var(--green-medio);
 }
 
 @media (max-width: 768px) {
@@ -586,9 +603,9 @@ footer {
 /* preguntas frecuentes */
 .faq h2 {
     text-align: center;
-    margin-bottom: 90px;
+    margin-bottom: 40px;
     font-weight: 900;
-    font-size: 50px ;
+    font-size: 30px ;
 }
 
 .faq p {
@@ -597,18 +614,18 @@ footer {
 }
 
 .faq {
-    background-image: linear-gradient(to bottom, #e5a65f , #885b27);
+    background-image: linear-gradient(to bottom, var(--gree-light) , var(--green-medio));
     padding: 40px 0;
     z-index: 1;
 }
 
 .question {
-    background-color: #fff;
+    background-color: var(--dark-white);
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-    padding: 20px;
+    padding: 17px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -618,13 +635,13 @@ footer {
 }
 
 .question h3 {
-    font-size: 20px;
-    color: #004aad;
+    font-size: 1em;
+    color: var(--orange);
     margin-bottom: 10px;
 }
 
 .question p {
-    font-size: 16px;
+    font-size: .8em;
     color: #333;
     margin-top: 10px;
 }
@@ -645,35 +662,50 @@ footer {
 
 
 /* -----------PROYECTOS------------ */
+.projects-section a{
+    text-decoration: none;
+    color: #000;
+}
 
 .projects-section {
     max-width: 1200px;
-    margin: 2rem auto;
+    margin: 90px auto 2rem;
     text-align: center;
 }
 
 .projects-section h2 {
-    margin-bottom: 1rem;
+    margin: 2rem 0;
+}
+.btn-details {
+    padding: 4px 10px;
+    background-color: var(--dark-green);
+    border-radius: 3px;
+    border: none;
+    color: var(--dark-white);
+    font-size: .8em;
+    margin: 7px 0;
+    cursor: pointer;
+}
+.btn-details:hover {
+    background-color: var(--green-medio);
 }
 /* --------------SHARE IDEAS---------------- */
 .chat-section {
     max-width: 1200px;
-    margin: 2rem auto;
+    margin: 90px auto 2rem;
     display: flex;
     flex-direction: row;
 }
-
 .chat-container {
     display: flex;
     width: 100%;
 }
-
 .chat-messages {
     flex: 3;
     background-color: #fff;
     border-radius: 10px;
     padding: 1rem;
-    margin-right: 1rem;
+    margin: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -696,13 +728,22 @@ footer {
     border-radius: 10px;
     flex-grow: 1;
 }
-
+.input-group{
+    display: flex;
+    margin: 10px 0;
+}
+.input-group textarea{
+    width: 500px;
+    resize: none;
+    margin-left: 20px;
+}
 .chat-users {
     flex: 1;
     background-color: #fff;
     border-radius: 10px;
     padding: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
 }
 
 .chat-users h3 {
@@ -717,37 +758,36 @@ footer {
 /* ---------------CREAR PROYECTO----------------- */
 .create-project-section {
     max-width: 800px;
-    margin: 2rem auto;
+    margin: 100px auto 2rem;
     background-color: #fff;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .form-group {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
 }
 
 .create-project-section h2 {
     margin-bottom: 1rem;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-.form-group {
-    width: 100%;
-    margin-bottom: 1rem;
-}
-
-.form-group label {
+.create-project-section .form-group label {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: bold;
 }
 
-.form-group input,
-.form-group textarea {
+.create-project-section .form-group input,
+.create-project-section .form-group textarea {
     width: 100%;
     padding: 0.5rem;
     border: 1px solid #ccc;
@@ -838,13 +878,12 @@ form {
     color: #333;
 }
 
-.form-group input {
+.form-group input, .form-section select {
     width: 100%;
     padding: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-
 .form-actions {
     margin-top: 1rem;
     display: flex;
@@ -884,6 +923,10 @@ form {
 header {
     background-color: var(--dark-green);
     padding: 1rem;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    height: 80px;
 }
 
 .navbar {
@@ -893,7 +936,7 @@ header {
 }
 
 .logo {
-    max-width: 90px;
+    max-width: 80px;
 }
 
 nav ul {
@@ -904,7 +947,9 @@ nav ul {
 nav ul li {
     margin-left: 2rem;
 }
-
+nav ul li a:hover{
+    color: var(--orange);
+}
 nav ul li a {
     color: white;
     text-decoration: none;
@@ -912,10 +957,11 @@ nav ul li a {
 }
 
 .project-header {
-    background-color: #3498db;
+    background-color: var(--gree-light);
     color: white;
     padding: 1rem;
     text-align: center;
+    margin-top: 80px;
 }
 
 .project-content {
@@ -953,10 +999,23 @@ nav ul li a {
     color: #2ecc71;
     font-weight: bold;
 }
+.project-details{
+    text-align: center;
+    margin: 10px 0 30px;
+}
+.project-details h3{
+    margin: 25px 0 20px;
+}
+.project-details p{
+    margin: 10px;
+}
 
 .add-comment {
     text-align: center;
     margin-bottom: 2rem;
+}
+.add-comment h3{
+    margin-bottom: 20px;
 }
 
 .add-comment textarea {
@@ -969,7 +1028,7 @@ nav ul li a {
     border-radius: 5px;
 }
 
-.add-comment button {
+.project-content button {
     padding: 0.5rem 2rem;
     border: none;
     border-radius: 5px;
@@ -979,11 +1038,11 @@ nav ul li a {
     font-size: 1rem;
 }
 
-.add-comment button span {
+.project-content button span {
     font-size: 1.5rem;
 }
 
-.add-comment button:hover {
+.project-content button:hover {
     background-color: #34495e;
 }
 
