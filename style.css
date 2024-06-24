@@ -28,7 +28,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 80px auto 2rem;
+    margin: 150px auto 2rem;
     max-width: 1200px;
 }
 
@@ -115,6 +115,7 @@ body {
 }
 
 footer {
+    font-size: 25px;
     background-color: var(--dark-green);
     color: #fff;
     text-align: center;
@@ -136,7 +137,7 @@ footer {
 }
 
 .hero h1 {
-    font-size: 48px;
+    font-size: 70px;
     margin-bottom: 20px;
     opacity: 0;
     color: var(--orange);
@@ -150,8 +151,8 @@ footer {
 }
 
 .hero p {
-    font-size: 20px;
-    margin-bottom: 20px;
+    font-size: 25px;
+    margin-bottom: 80px;
 
 }
 
@@ -160,8 +161,8 @@ footer {
     border: none;
     border-radius: 5px;
     text-decoration: none;
-    font-size: 16px;
-    margin: 5px;
+    font-size: 30px;
+    margin: 10px;
 }
 
 .hero .btn-primary {
@@ -174,7 +175,7 @@ footer {
 /* descripcion */
 
 .container {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     /* padding: 9% 0; */
     height: 85vh;
@@ -186,13 +187,14 @@ footer {
     margin: 20px 0 30px;
     color: #333;
     font-weight: 900;
-    font-size: 30px ;
+    font-size: 50px ;
 }
 
 .product-overview p {
-    margin: 30px 10px;
+    margin: 30px 0;
     color: #333;
     font-weight: 500;
+    font-size: 25px;
 }
 
 .product-overview {
@@ -206,6 +208,7 @@ footer {
     justify-content: space-around;
     gap: 20px;
     border-width: 5px;
+    margin-top: 100px;
 }
 
 .feature {
@@ -231,14 +234,14 @@ footer {
 }
 
 .feature h3 {
-    font-size: 1em;
+    font-size: 1.5em;
     font-weight: 900;
     margin-bottom: 10px;
     color: var(--orange);
 }
 
 .feature p {
-    font-size: .9em;
+    font-size: 1em;
     color: #777;
 }
 
@@ -257,17 +260,21 @@ footer {
 /* cómo funciona */
 .how-it-works h2 {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     color: var(--dark-white);
     font-weight: 900;
-    font-size: 30px ;
+    font-size: 50px ;
 }
 
+.how-it-works p {
+    margin-bottom: 20px;
+    color: #555;
+}
 .how-it-works {
     background-image: linear-gradient(to bottom, var(--dark-green) , var(--green-medio));
     padding: 30px 0;
     position: relative;
-    height: 100vh;
+    height: 90vh;
 }
 .steps-img{
     display: flex;
@@ -285,8 +292,10 @@ footer {
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
-    padding: 13px;
+    padding: 20px;
     margin-bottom: 20px;
+    width: 100%;
+    max-width: 300px;
     margin-right: 20px;
     z-index: 1;
 }
@@ -296,20 +305,20 @@ footer {
 } */
 
 .step h3 {
-    font-size: .8em;
+    font-size: 20px;
     color: var(--orange);
-    margin-bottom: 7px;
+    margin-bottom: 10px;
 }
 
 .step p {
-    font-size: .7em;
+    font-size: 1.2em;
     color: #333;
     margin-bottom: 5px;
     color: #555;
 }
 
 .how-it-works img {
-    width: 600px;
+    width: 660px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1;
@@ -339,7 +348,7 @@ footer {
     margin-bottom: 20px;
     color: #333;
     font-weight: 900;
-    font-size: 30px ;
+    font-size: 50px ;
 }
 
 .testimonial p {
@@ -360,7 +369,7 @@ footer {
     text-align: center;
     padding: 20px;
     margin: 20px auto;
-    max-width: 600px;
+    max-width: 800px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -370,14 +379,14 @@ footer {
 }
 
 .testimonial p {
-    font-size: 16px;
+    font-size: 18px;
     font-style: italic;
     color: #333;
     margin-bottom: 10px;
 }
 
 .testimonial h4 {
-    font-size: 12px;
+    font-size: 16px;
     color: var(--orange);
 }
 
@@ -494,9 +503,9 @@ footer {
 /* planes y precios */
 .pricing h2 {
     text-align: center;
-    margin: 50px 0 60px;
+    margin-bottom: 90px;
     font-weight: 900;
-    font-size: 30px ;
+    font-size: 50px ;
     color: var(--dark-white);
 }
 .pricing p {
@@ -506,7 +515,7 @@ footer {
 .pricing{
     position: relative;
     background-image: linear-gradient(to bottom, var(--dark-green) , var(--green-medio));
-    height: 100vh;
+    height: 90vh;
 }
 .pricing .plans {
     display: flex;
@@ -521,8 +530,8 @@ footer {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    width: 200px;
-    height: 300px;
+    width: 280px;
+    height: 500px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     z-index: 1;
@@ -535,16 +544,16 @@ footer {
 }
 
 .plan h3 {
-    font-size: 1em;
-    margin-bottom: 20px;
+    font-size: 1.5em;
+    margin-bottom: 40px;
     color: var(--orange);
     font-weight: 800;
 }
 
 .plan p {
-    font-size: 1em;
+    font-size: 2em;
     color: #000;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     font-weight: 300;
 }
 
@@ -558,7 +567,7 @@ footer {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    font-size: .7em;
+    font-size: 1em;
     color: #555;
 }
 
@@ -577,11 +586,11 @@ footer {
     color: white;
     border: none;
     border-radius: 5px;
-    font-size: .9em;
+    font-size: 1.2em;
     cursor: pointer;
     text-align: center;
     transition: background-color 0.3s ease;
-    bottom: 20px;
+    bottom: 30px;
 }
 
 .buy-button:hover {
@@ -603,9 +612,9 @@ footer {
 /* preguntas frecuentes */
 .faq h2 {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 90px;
     font-weight: 900;
-    font-size: 30px ;
+    font-size: 50px ;
 }
 
 .faq p {
@@ -625,7 +634,7 @@ footer {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-    padding: 17px;
+    padding: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -635,13 +644,13 @@ footer {
 }
 
 .question h3 {
-    font-size: 1em;
+    font-size: 20px;
     color: var(--orange);
     margin-bottom: 10px;
 }
 
 .question p {
-    font-size: .8em;
+    font-size: 16px;
     color: #333;
     margin-top: 10px;
 }
@@ -699,6 +708,7 @@ footer {
 .chat-container {
     display: flex;
     width: 100%;
+    margin: 80px 0;
 }
 .chat-messages {
     flex: 3;
@@ -758,7 +768,7 @@ footer {
 /* ---------------CREAR PROYECTO----------------- */
 .create-project-section {
     max-width: 800px;
-    margin: 100px auto 2rem;
+    margin: 240px auto;
     background-color: #fff;
     padding: 2rem;
     border-radius: 10px;
@@ -926,17 +936,18 @@ header {
     position: fixed;
     width: 100%;
     z-index: 10;
-    height: 80px;
+    height: 110px;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 1.5em;
 }
 
 .logo {
-    max-width: 80px;
+    max-width: 140px;
 }
 
 nav ul {
@@ -961,7 +972,7 @@ nav ul li a {
     color: white;
     padding: 1rem;
     text-align: center;
-    margin-top: 80px;
+    margin-top: 100px;
 }
 
 .project-content {
